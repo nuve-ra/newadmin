@@ -2,7 +2,11 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 // API URL configuration
+<<<<<<< HEAD
 const API_URL = 'https://spotify-backend-jbda.onrender.com';
+=======
+const API_URL = 'https://spotify-backend-jbda.onrender.com/';
+>>>>>>> 02490f5711d9b1cd2acba67be3e5512409c48b71
 
 // Create axios instance with base configuration
 const api = axios.create({

@@ -18,7 +18,11 @@ const AddSong = () => {
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
+<<<<<<< HEAD
         const response = await axios.get(`${url}/api/album/list`);
+=======
+        const response = await axios.get(`${url}/api/album/all`);
+>>>>>>> 02490f5711d9b1cd2acba67be3e5512409c48b71
         if (response.data.success) {
           setAlbums(response.data.albums);
         }
