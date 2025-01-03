@@ -2,11 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 // API URL configuration
-<<<<<<< HEAD
 const API_URL = 'https://spotify-backend-jbda.onrender.com';
-=======
-const API_URL = 'https://spotify-backend-jbda.onrender.com/';
->>>>>>> 02490f5711d9b1cd2acba67be3e5512409c48b71
 
 // Create axios instance with base configuration
 const api = axios.create({
@@ -33,7 +29,7 @@ export const PlayerProvider = ({ children }) => {
     setError(null);
     try {
       // Make a direct API call to the songs endpoint
-      const response = await axios.get(`${API_URL}/api/song/list`);
+      const response = await api.get('/api/song/list');
       console.log('Songs API Response:', response.data);
       
       if (response.data.success) {
@@ -55,7 +51,7 @@ export const PlayerProvider = ({ children }) => {
   const getAlbumsData = async () => {
     try {
       // Make a direct API call to the albums endpoint
-      const response = await axios.get(`${API_URL}/api/album/list`);
+      const response = await api.get('/api/album/list');
       console.log('Albums API Response:', response.data);
       
       if (response.data.success) {
